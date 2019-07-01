@@ -1,10 +1,10 @@
 # INDQ-EVENTS
 
-#Tecnologías usadas
+##Tecnologías usadas
 
 Java en Android Studio
 
-#Intrucciones para ejecución
+##Intrucciones para ejecución
 
 1. Clonar el repositorio
 2. Abrir el proyecto
