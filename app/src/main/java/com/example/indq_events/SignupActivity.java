@@ -26,11 +26,18 @@ public class SignupActivity extends AppCompatActivity {
     Button btnlogin, btnconfirm;
     EditText _name,_lastName,_email,_password,_repeatPassword;
     RadioButton _female;
-    String estado;
+    public String estado, name,lastName, email,password,repeatPassword;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
+
+        //Initial variables
+        _name = findViewById(R.id.input_name);
+        _lastName = findViewById(R.id.input_lastName);
+        _email = findViewById(R.id.input_email);
+        _password = findViewById(R.id.input_password);
+        _repeatPassword = findViewById(R.id.input_repeatPassword);
 
         //Click confirm
         btnconfirm = findViewById(R.id.btn_confirmSignup);
@@ -62,6 +69,12 @@ public class SignupActivity extends AppCompatActivity {
     }
     // SIGNUP
     public void signup() {
+        //Get values of variables
+        name = _name.getText().toString();
+        lastName = _lastName.getText().toString();
+        email = _email.getText().toString();
+        password = _password.getText().toString();
+        repeatPassword = _repeatPassword.getText().toString();
         if (!validate()) {
             onSignupFailed();
             return;
@@ -118,22 +131,6 @@ public class SignupActivity extends AppCompatActivity {
     }
     public boolean validate(){
         boolean valid = true;
-
-        //Initial variables
-        _name = findViewById(R.id.input_name);
-        _lastName = findViewById(R.id.input_lastName);
-        _email = findViewById(R.id.input_email);
-        _password = findViewById(R.id.input_password);
-        _repeatPassword = findViewById(R.id.input_repeatPassword);
-
-        //Get values of variables
-        String name = _name.getText().toString();
-        String lastName = _lastName.getText().toString();
-        String email = _email.getText().toString();
-        String password = _password.getText().toString();
-        String repeatPassword = _repeatPassword.getText().toString();
-
-
         //Validation Name
         if (name.isEmpty()) {
             _name.setError("Nombre vacio");

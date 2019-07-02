@@ -43,16 +43,16 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case android.R.id.home:
-                Intent i = new Intent(this, LoginActivity.class);
-                startActivity(i);
-            case R.id.logout:
-                Intent in = new Intent(this, LoginActivity.class);
-                startActivity(in);
+            case R.id.logoutEvent:
+                Intent inte = new Intent(this, LoginActivity.class);
+                startActivity(inte);
                 return true;
-            case R.id.add:
-                Intent inten = new Intent(this, LoginActivity.class);
-                startActivity(inten);
+            case R.id.addEvent:
+                Intent i= new Intent(this, EventTitleActivity.class);
+                i.putExtra("FirstName",_firstName);
+                i.putExtra("LastName",_lastName);
+                i.putExtra("Token",_token);
+                startActivity(i);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.main, menu);
+        inflater.inflate(R.menu.menu_main, menu);
         return true;
     }
 }

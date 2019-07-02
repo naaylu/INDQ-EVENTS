@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/addEvent"
+        android:title="Agregar evento" />
+    <item android:id="@+id/logoutEvent"
+        android:title="Cerrar sesion" />
+</menu>

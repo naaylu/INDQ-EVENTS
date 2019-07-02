@@ -4,6 +4,7 @@
     <string name="signup"><u>¿No tienes una cuenta? Registrate</u></string>
     <string name="layoutlogin"><u>¿Ya eres miembro? Inicia sesión</u></string>
     <string name="register">Registro</string>
+    <string name="events">Agregar evento</string>
     <string name="gender">Género</string>
     <string name="title_activity_login">LoginActivity</string>
 </resources>
